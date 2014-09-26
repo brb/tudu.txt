@@ -4,8 +4,12 @@ if exists("b:current_syntax")
     finish
 endif
 
-syntax match TuduPriorityHigh   '^.*!.*'
+syntax match TuduPriorityHeader     '^#.*'
+syntax match TuduPriorityItem       '^\*.*'
+syntax match TuduPriorityHigh       '^.*!.*'
 
-highlight link TuduPriorityHigh Error
+highlight link TuduPriorityHigh     Error
+highlight link TuduPriorityHeader   Normal
+highlight link TuduPriorityItem     Comment
 
 let b:current_syntax = "tudu"
